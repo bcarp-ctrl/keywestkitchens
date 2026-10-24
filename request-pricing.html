@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Request Pricing · Key West Kitchens</title>
+<meta name="description" content="Send drawings for pricing with the project, delivery and optional cabinet list.">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Josefin+Sans:wght@400;600&display=swap">
+<link rel="icon" type="image/svg+xml" href="img/brand/kwk-favicon.svg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 120 120" aria-hidden="true"><rect x="4" y="4" width="112" height="112" rx="3" fill="none" stroke="currentColor" stroke-width="5"/><rect x="19" y="19" width="82" height="82" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".5"/><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M24 54 L44 36 H76 L96 54" stroke-width="4.5"/><path d="M22 60 H98" stroke-width="3"/><path d="M30 60 V82 M43 60 V82 M60 60 V82 M77 60 V82 M90 60 V82" stroke-width="2"/><path d="M30 76 H90" stroke-width="1.3" opacity=".8"/><path d="M50 63 V75 M70 63 V75" stroke-width="2.6" opacity=".9"/><path d="M26 82 H94" stroke-width="3"/><path d="M34 82 V88 M60 82 V88 M86 82 V88" stroke-width="2"/></g><path d="M28 94 q8 -6 16 0 t16 0 t16 0 t16 0" fill="none" stroke="#d4a955" stroke-width="3" stroke-linecap="round"/></svg><span class="bt"><b>Key West Kitchens</b><small>Key West, Florida</small></span></a>
+<button class="navtoggle" id="navtoggle" aria-expanded="false" aria-controls="mainnav">Menu</button>
+<nav class="main" id="mainnav" aria-label="Main"><a href="index.html">Home</a><a href="collection.html">The Line</a><a href="specifications.html">Construction</a><a href="doors-finishes.html">Doors & Finishes</a><a href="assembly.html">Assembly</a><a href="shipping.html">Shipping</a><a href="how-to-order.html">How to Order</a><a href="trade.html">Trade Program</a><a href="request-pricing.html" aria-current="page" class="cta">Request Pricing</a></nav>
+</div></header>
+<main>
+
+<section><div class="wrap stack-lg">
+<div class="stack prose"><p class="eyebrow">Request pricing</p><h1>Send drawings for pricing.</h1>
+<p class="lead">Tell us about the project and attach what you have. We return cabinet pricing, destination freight and numbered detail drawings for your sign-off. If you already have a cabinet list, add it in the order builder below and it goes out with the request.</p></div>
+
+<form id="req" novalidate>
+<fieldset><legend>Who's asking</legend>
+<div class="fields">
+<label class="f">Name<input id="name" name="name" required autocomplete="name"></label>
+<label class="f">Company<input id="company" name="company" autocomplete="organization"></label>
+<label class="f">Email<input id="email" name="email" type="email" required autocomplete="email"></label>
+<label class="f">Phone<input id="phone" name="phone" type="tel" autocomplete="tel"></label>
+<label class="f">I am a<select id="role" name="role"><option>Cabinet shop</option><option>Builder / remodeler</option><option>Designer</option><option>Installer</option><option>New cabinet dealer</option><option>Homeowner (working with a professional)</option><option>Homeowner (need a professional)</option></select></label>
+</div></fieldset>
+
+<fieldset><legend>The project</legend>
+<div class="fields">
+<label class="f">Project name or address<input id="project" name="project"></label>
+<label class="f">Rooms<span class="h">Kitchen, pantry, baths, laundry, bar…</span><input id="rooms" name="rooms"></label>
+<label class="f">Door style<span class="h">Shaker, slab, raised panel, beaded… or "help me choose"</span><input id="door" name="door"></label>
+<label class="f">Wood or paint-grade<input id="species" name="species" placeholder="e.g. paint-grade maple, white oak"></label>
+<label class="f">Finish<span class="h">Color name, chip number or stain</span><input id="finish" name="finish" placeholder="e.g. SW 7005 Pure White"></label>
+<label class="f">Target date<input id="date" name="date" type="month"></label>
+</div>
+<label class="f">Drawings and files<span class="h">Plans, elevations, sketches, appliance specs, photos. PDF, images, DWG.</span><input id="files" name="files" type="file" multiple></label>
+<label class="f">Notes<textarea id="notes" name="notes" placeholder="Anything we should know: appliances, ceiling height, island details, options to price separately…"></textarea></label>
+</fieldset>
+
+<fieldset><legend>Delivery</legend>
+<div class="fields">
+<label class="f">Delivery address<input id="shipto" name="shipto" autocomplete="street-address"></label>
+<label class="f">City, state, ZIP<input id="shipcity" name="shipcity"></label>
+</div>
+<div class="checks">
+<label><input type="checkbox" id="dock" name="dock"> Loading dock</label>
+<label><input type="checkbox" id="forklift" name="forklift"> Forklift on site</label>
+<label><input type="checkbox" id="liftgate" name="liftgate"> Liftgate needed</label>
+<label><input type="checkbox" id="residential" name="residential"> Residential street</label>
+<label><input type="checkbox" id="gated" name="gated"> Gated / restricted access</label>
+<label><input type="checkbox" id="sample" name="sample"> Send a finish sample</label>
+</div>
+</fieldset>
+
+<fieldset class="builder"><legend>Order builder (optional)</legend>
+<p class="muted">Already have a cabinet list? Enter it here in inches, to the 1/16″ (decimals or fractions like 35 7/8). We check it against your drawings and return numbered detail drawings for sign-off.</p>
+<div class="tablewrap"><table id="cabtable"><thead><tr><th>#</th><th>Type</th><th>Description</th><th>W</th><th>H</th><th>D</th><th>Qty</th><th></th></tr></thead><tbody id="cabrows"></tbody></table></div>
+<div class="btns"><button type="button" class="btn ghost" id="addrow">Add cabinet</button><span class="muted" id="cabcount" style="align-self:center"></span></div>
+</fieldset>
+
+<div class="btns"><button type="submit" class="btn primary">Send pricing request</button><span class="muted" style="align-self:center">We reply within a few business days.</span></div>
+<div id="result" hidden class="stack">
+<div class="notice"><strong>Request ready.</strong><span id="resultmsg"></span></div>
+<pre class="summary" id="summary"></pre>
+<div class="btns"><button type="button" class="btn ghost" id="copy">Copy request text</button></div>
+</div>
+</form>
+
+<div class="split" style="margin-top:1rem">
+<div class="stack"><p class="eyebrow">Prefer to email or call?</p><h2>Reach the shop directly.</h2></div>
+<div class="stack prose"><p><strong>sales@keywestkitchens.com</strong><br><strong>305-294-4279</strong><br>5750 2nd Ave, Key West, FL 33040</p><p class="muted">Showroom: 3229 Flagler Ave, Unit 104, Key West, by appointment.</p></div>
+</div>
+</div></section>
+<script>
+(function(){
+var TYPES=['Wall', 'Base', 'Tall', 'Vanity', 'Hood / Shelf', 'Panel / Filler / Toe', 'Molding', 'Accessory'];
+var rows=document.getElementById('cabrows'),count=document.getElementById('cabcount'),n=0;
+function opt(){return TYPES.map(function(t){return '<option>'+t+'</option>'}).join('')}
+function add(d){d=d||{};n++;var tr=document.createElement('tr');
+tr.innerHTML='<td class="x">'+n+'</td><td><select aria-label="Type">'+opt()+'</select></td><td><input aria-label="Description" placeholder="e.g. 3-drawer base, sink base, 2-door wall" value="'+(d.desc||'')+'"></td><td class="n"><input aria-label="Width" inputmode="decimal" value="'+(d.w||'')+'"></td><td class="n"><input aria-label="Height" inputmode="decimal" value="'+(d.h||'')+'"></td><td class="n"><input aria-label="Depth" inputmode="decimal" value="'+(d.d||'')+'"></td><td class="n"><input aria-label="Quantity" inputmode="numeric" value="'+(d.q||1)+'"></td><td class="x"><button type="button" class="rm" aria-label="Remove row">×</button></td>';
+if(d.type)tr.querySelector('select').value=d.type;
+tr.querySelector('.rm').addEventListener('click',function(){tr.remove();renumber()});rows.appendChild(tr);renumber();}
+function renumber(){var i=0;rows.querySelectorAll('tr').forEach(function(tr){i++;tr.firstChild.textContent=i});n=i;count.textContent=i?i+' line'+(i>1?'s':''):''}
+document.getElementById('addrow').addEventListener('click',function(){add()});
+add({type:'Base',desc:'Example: 3-drawer base',w:'30',h:'30 1/2',d:'24',q:1});
+function v(id){var e=document.getElementById(id);return e?(e.type==='checkbox'?(e.checked?'yes':'no'):e.value.trim()):''}
+document.getElementById('req').addEventListener('submit',function(ev){ev.preventDefault();
+var missing=['name','email'].filter(function(id){return !v(id)});
+if(missing.length){document.getElementById(missing[0]).focus();document.getElementById('resultmsg').textContent='Please add your '+missing.join(' and ')+' so we can reply.';document.getElementById('result').hidden=false;document.getElementById('summary').textContent='';return}
+var L=[];L.push('KEY WEST KITCHENS - PRICING REQUEST');L.push('');
+[['Name','name'],['Company','company'],['Email','email'],['Phone','phone'],['Role','role'],['Project','project'],['Rooms','rooms'],['Door style','door'],['Wood / paint-grade','species'],['Finish','finish'],['Target date','date'],['Ship to','shipto'],['City/State/ZIP','shipcity']].forEach(function(p){var x=v(p[1]);if(x)L.push(p[0]+': '+x)});
+var acc=['dock','forklift','liftgate','residential','gated','sample'].filter(function(id){return v(id)==='yes'});if(acc.length)L.push('Delivery/options: '+acc.join(', '));
+var f=document.getElementById('files');if(f.files&&f.files.length){L.push('Files attached: '+Array.prototype.map.call(f.files,function(x){return x.name}).join(', '))}
+if(v('notes'))L.push('Notes: '+v('notes'));
+var cabs=[];rows.querySelectorAll('tr').forEach(function(tr,i){var c=tr.querySelectorAll('input,select');var w=c[1].value.trim(),h=c[2].value.trim(),d=c[3].value.trim();if(c[0].value.trim()||w||h||d){cabs.push((i+1)+'. '+tr.querySelector('select').value+' - '+c[0].value.trim()+' - '+w+' W x '+h+' H x '+d+' D - qty '+(c[4].value||1))}});
+if(cabs.length){L.push('');L.push('CABINET LIST (inches)');L=L.concat(cabs)}
+document.getElementById('summary').textContent=L.join('\n');
+document.getElementById('resultmsg').textContent='Copy the text below into an email to sales@keywestkitchens.com with your drawings attached, or call 305-294-4279. (Live form delivery is connected when the site goes on its host.)';
+document.getElementById('result').hidden=false;document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'});});
+document.getElementById('copy').addEventListener('click',function(){var t=document.getElementById('summary').textContent,b=this;function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy request text'},1500)}
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){sel()})}else sel();
+function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('summary'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected - press Ctrl/Cmd+C'}});
+})();
+</script>
+
+</main>
+<footer><div class="wrap">
+<div><img src="img/brand/kwk-seal-shell.svg" alt="Key West Kitchens seal" width="120" height="120" style="margin-bottom:.8rem"><b>Key West Kitchens</b>Full-Access Key West–Style Cabinetry. Custom sized, professionally finished in Key West, and shipped ready to assemble.</div>
+<div><b>Talk to us</b>305-294-4279<br>sales@keywestkitchens.com<br>5750 2nd Ave, Key West, FL 33040</div>
+<div><b>Built by Hansen &amp; Bringle</b>Key West Kitchens is built and finished by Hansen &amp; Bringle Cabinets, the Florida Keys' custom woodworking shop since 1978. <a href="https://www.hansenandbringle.com" target="_blank" rel="noopener">hansenandbringle.com</a></div>
+<div class="fine"><span>© 2026 Key West Kitchens · Hansen &amp; Bringle Cabinets, Key West, Florida</span><span>Pricing, freight and lead times are confirmed on your written quote.</span></div>
+</div></footer>
+<script>
+(function(){var t=document.getElementById('navtoggle'),n=document.getElementById('mainnav');if(t){t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);});}})();
+</script>
+</body>
+</html>
